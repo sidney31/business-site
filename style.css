@@ -9,12 +9,14 @@
 }
 
 .bg{
-    width: 100vw;
-    height: 100vh;
-    background: url("background.jpg") no-repeat center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: url("bg.png") no-repeat center;
     background-size: cover;
     transition: all 0.15s ease;
     animation: bgAnim 60s infinite;
+    position: fixed;
 }
 
 @keyframes bgAnim{
@@ -46,11 +48,6 @@
     padding: 3rem 5rem;
 }
 
-.photo{
-    border-radius: 100px;
-    background-color: white;
-
-}
 
 .name{
     position: inherit;
@@ -69,6 +66,7 @@
 
 .contents{
     width: 150%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,4 +118,43 @@
 }
 .vk:hover, .tg:hover, .bh:hover{
     opacity: 0.75;
+}
+
+@media (max-width: 400px) {
+    .container{
+        width: 220px;
+    }
+    .contacts{
+        gap: 35px;
+    }
+    .name{
+        height: 45px;
+        font-size: 32px;
+    }
+}
+@media (max-width: 375px) {
+    .container{
+        width: 100px;
+        height: 300px;
+    }
+    .contacts{
+        gap: 25px;
+        width: 155px;
+        padding: 5px 20px;
+    }
+    .vk, .tg, .bh{
+        height: 35px;
+        width: 35px;
+    }
+    .contents{
+        width: 250%;
+        font-size: 23px;
+    }
+    .first, .second, .third, .fourth{
+        padding: 9px;
+    }
+    .name{
+        height: 35px;
+        font-size: 23px;
+    }
 }
